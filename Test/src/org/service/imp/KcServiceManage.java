@@ -22,4 +22,15 @@ public class KcServiceManage implements KcService{
 	public void setKcDao(KcDao kcDao){
 		this.kcDao = kcDao;
 	}
+	
+	public void delete(String kch){
+		kcDao.delete(kch);
+	//	cjDao.deleteOneXsCj(xh);                 //暂不删除学生课程的成绩
+	}
+	public void update(Kcb kcb){
+		kcDao.update(kcb);
+	}
+	public void save(Kcb kcb){
+		kcDao.save(kcb);
+	}
 }

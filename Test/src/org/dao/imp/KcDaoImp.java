@@ -39,4 +39,40 @@ public class KcDaoImp extends BaseDAO implements KcDao{
 			return null;
 		}
 	}
+	
+	
+	public void delete(String kch){
+		try{
+			Session session=getSession();
+			Transaction ts=session.beginTransaction();
+			Kcb kc=find(kch);
+			session.delete(kc);
+			ts.commit();
+			session.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	public void update(Kcb kcb){
+		try{
+			Session session=getSession();
+			Transaction ts=session.beginTransaction();
+			session.update(kcb);
+			ts.commit();
+			session.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	public void save(Kcb kcb){
+		try{
+			Session session=getSession();
+			Transaction ts=session.beginTransaction();
+			session.save(kcb);
+			ts.commit();
+			session.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 }

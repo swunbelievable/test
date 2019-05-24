@@ -6,4 +6,9 @@ public interface KcDao {
 	public List findAll(int pageNow, int pageSize);			//查询所有课程信息
 	public int findKcSize();								//查询一共多少条课程记录
 	public Kcb find(String kch);							//根据课程号查找课程信息
+	
+	
+	public void delete(String kch);
+	public void update(Kcb kcb);
+	public void save(Kcb kcb);
 }
