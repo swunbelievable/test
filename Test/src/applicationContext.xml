@@ -69,6 +69,9 @@
 	<bean id="kcService" class="org.service.imp.KcServiceManage">
 		<property name="kcDao" ref="kcDao"/>
 	</bean>
+	<bean id="kc" class="org.action.KcAction">
+		<property name="kcService" ref="kcService"/>
+	</bean>
 	<bean id="cjService" class="org.service.imp.CjServiceManage">
 		<property name="cjDao" ref="cjDao"/>
 	</bean>
