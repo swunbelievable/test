@@ -3,7 +3,7 @@
 <head>
 	<title>学生成绩管理系统</title>
 </head>
-<body bgcolor="#D9DFAA" link="#D9DFAA" vlink="#D9DFAA">
+<body>
 	<table border="0" cellpadding="0" cellspacing="0">
 		<tr>
 			<td>
@@ -29,13 +29,13 @@
 		</tr>
 		<tr>
 			<td>
-				<a href="#" target="right">
+				<a href="addKc.action" target="right">
 					<img src="images/addKc.gif" width="184" height="39" /></a>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<a href="#" target="right">
+				<a href="kcInfo.action" target="right">
 					<img src="images/findKc.gif" width="184" height="47" /></a>
 			</td>
 		</tr>

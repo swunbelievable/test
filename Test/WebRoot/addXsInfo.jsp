@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
 <head></head>
-<body bgcolor="#D9DFAA">
+<body>
 	<h3>请填写学生信息</h3>
 	<hr width="700" align="left">
 	<s:form action="addXs" method="post" enctype="multipart/form-data">

@@ -37,6 +37,33 @@
 			<result name="success">/success.jsp</result>
 			<result name="error">/existXs.jsp</result>
 		</action>
+		<!-- 显示所有课程信息 -->
+		<action name="KcInfo" class="kc">
+			<result name="success">/kcInfo.jsp</result>
+		</action>
+		<!-- 查看某课程详细信息 -->
+		<action name="findKc" class="kc" method="findKc">
+			<result name="success">/morekc.jsp</result>
+		</action>
+		<!-- 删除某课程信息 -->
+		<action name="deleteKs" class="kc" method="deleteKc">
+			<result name="success">/success.jsp</result>
+		</action>
+		<!-- 修改某课程信息 -->
+		<action name="updateKcView" class="kc" method="updateKcView">
+			<result name="success">/updateKcView.jsp</result>
+		</action>
+		<action name="updatekc" class="kc" method="updatekc">
+			<result name="success">/success.jsp</result>
+		</action>
+		<!-- 录入课程信息 -->
+		<action name="addKcView" class="kc" method="addKcView">
+			<result name="success">/addKcInfo.jsp</result>
+		</action>
+		<action name="addKc" class="kc" method="addKc">
+			<result name="success">/success.jsp</result>
+			<result name="error">/existKc.jsp</result>
+		</action>
 		<!-- 录入学生成绩 -->
 		<action name="addXscjView" class="cj">
 			<result name="success">/addCj.jsp</result>

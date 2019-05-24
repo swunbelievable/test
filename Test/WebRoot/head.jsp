@@ -3,7 +3,7 @@
 <head>
 	<title>学生成绩管理系统</title>
 </head>
-<body bgcolor="#D9DFAA">
+<body>
 	<img src="images/head.gif"/>
 </body>
 </html>

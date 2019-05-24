@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
-<body bgcolor="#D9DFAA">
+<body>
 	<table border="1" cellspacing="1" cellpadding="8" width="700">
 		<tr bgcolor="silver">
 			<th>学号</th><th>姓名</th><th>课程名</th><th>成绩</th><th>学分</th><th>删除</th>

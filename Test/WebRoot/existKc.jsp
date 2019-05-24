@@ -2,6 +2,6 @@
 <html>
 <head></head>
 <body>
-	恭喜你，操作成功！
+	课程号已经存在！
 </body>
 </html>

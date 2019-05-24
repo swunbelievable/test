@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
 <head></head>
-<body bgcolor="#D9DFAA">
+<body>
 	<s:set name="xs" value="#request.xsInfo"></s:set>
 	<s:form action="updateXs" method="post" enctype="multipart/form-data">
 		<table border="0" cellspacing="1" cellpadding="8" width="500">
@@ -61,10 +61,8 @@
 			</tr>
 		</table>
 		<input type="submit" value="修改"/>
-		<!-- 返回上一界面 -->
 		<input type="button" value="返回" onclick="javascript:history.back();"/>
 	</s:form>
-	<!-- 这里用 JavaScript 来实现根据该学生的专业 ID 来显示专业名 -->
 	<script type="text/javascript">
 		document.getElementById("xs.zyb.id").value='<s:property value="#xs.zyb.id"/>'
 	</script>

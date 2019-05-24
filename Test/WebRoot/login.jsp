@@ -4,7 +4,7 @@
 <head>
 	<title>学生成绩管理系统</title>
 </head>
-<body bgcolor="#D9DFAA">
+<body>
 <s:form action="login" method="post" theme="simple">
 <table>
 	<caption>用户登录</caption>

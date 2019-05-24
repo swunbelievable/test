@@ -2,7 +2,7 @@
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
 <head></head>
-<body bgcolor="#D9DFAA">
+<body>
 	<h3>该学生信息如下：</h3>
 	<s:set name="xs" value="#request.xs"></s:set>
 	<s:form action="xsInfo" method="post">
