@@ -11,8 +11,17 @@ public class Dlb implements java.io.Serializable {
 	private Integer id;
 	private String xh;
 	private String kl;
+	private String type;
 
 	// Constructors
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
 
 	/** default constructor */
 	public Dlb() {

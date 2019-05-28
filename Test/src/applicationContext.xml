@@ -14,6 +14,9 @@
 		<property name="url" value="jdbc:sqlserver://localhost:1433"></property>
 		<property name="username" value="sa"></property>
 		<property name="password" value="123456"></property>
+		 <property name="maxActive" value="100" ></property>
+        <property name="maxIdle" value="30" ></property>
+        <property name="maxWait" value="10000" ></property>
 	</bean>
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
@@ -55,6 +58,7 @@
 	<bean id="zyDao" class="org.dao.imp.ZyDaoImp" parent="baseDAO"/>
 	<bean id="xsService" class="org.service.imp.XsServiceManage">
 		<property name="xsDao" ref="xsDao"/>
+		<property name="cjDao" ref="cjDao"/>
 	</bean>
 	<bean id="zyService" class="org.service.imp.ZyServiceManage">
 		<property name="zyDao" ref="zyDao"/>
@@ -69,7 +73,6 @@
 	<bean id="kcService" class="org.service.imp.KcServiceManage">
 		<property name="kcDao" ref="kcDao"/>
 	</bean>
-	
 	<bean id="kc" class="org.action.KcAction">
 		<property name="kcService" ref="kcService"/>
 	</bean>
@@ -80,5 +83,14 @@
 		<property name="xsService" ref="xsService"/>
 		<property name="kcService" ref="kcService"/>
 		<property name="cjService" ref="cjService"/>
+	</bean>
+	
+	<bean id="jsDao" class="org.dao.imp.JsDaoImp" parent="baseDAO"/>
+	<bean id="glDao" class="org.dao.imp.GlDaoImp" parent="baseDAO"/>
+	<bean id="jsService" class="org.service.imp.JsServiceManage">
+		<property name="jsDao" ref="jsDao"/>
+	</bean>
+	<bean id="glService" class="org.service.imp.GlServiceManage">
+		<property name="glDao" ref="glDao"/>
 	</bean>
 </beans>

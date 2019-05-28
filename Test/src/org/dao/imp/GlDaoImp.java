@@ -1,15 +1,24 @@
 package org.dao.imp;
-import java.util.*;
-import org.dao.*;
-import org.model.*;
-import org.hibernate.*;
-public class XsDaoImp extends BaseDAO implements XsDao{
-	/* 实现：学生信息查询 */
-	public List findAll(int pageNow, int pageSize){
+
+import java.util.List;
+
+import org.dao.BaseDAO;
+import org.dao.GlDao;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.model.Glb;
+import org.model.Xsb;
+
+public class GlDaoImp extends BaseDAO implements GlDao {
+
+	@Override
+	public List findAll(int pageNow, int pageSize) {
+		// TODO Auto-generated method stub
 		try{
 			Session session=getSession();
 			Transaction ts=session.beginTransaction();
-			Query query=session.createQuery("from Xsb order by xh");
+			Query query=session.createQuery("from Glb order by glh");
 			int firstResult=(pageNow-1)*pageSize;
 			query.setFirstResult(firstResult);
 			query.setMaxResults(pageSize);
@@ -23,73 +32,81 @@ public class XsDaoImp extends BaseDAO implements XsDao{
 			return null;
 		}
 	}
-	public int findXsSize(){
+
+	@Override
+	public int findGlSize() {
+		// TODO Auto-generated method stub
 		try{
 			Session session=getSession();
 			Transaction ts=session.beginTransaction();
-			return session.createQuery("from Xsb").list().size();			
+			return session.createQuery("from Glb").list().size();			
 		}catch(Exception e){
 			e.printStackTrace();
 			return 0;
 		}
 	}
-	
-	/* 实现：查看某个学生的详细信息 */
-	public Xsb find(String xh){
+
+	@Override
+	public Glb find(String glh) {
+		// TODO Auto-generated method stub
 		try{
 			Session session=getSession();
 			Transaction ts=session.beginTransaction();
-			Query query=session.createQuery("from Xsb where xh=?");
-			query.setParameter(0, xh);
+			Query query=session.createQuery("from Glb where glh=?");
+			query.setParameter(0, glh);
 			query.setMaxResults(1);
-			Xsb xs=(Xsb)query.uniqueResult();
+			Glb gl=(Glb)query.uniqueResult();
 			ts.commit();
 			session.clear();
-			return xs;
+			return gl;
 		}catch(Exception e){
 			e.printStackTrace();
 			return null;
-		}		
+		}	
 	}
-	
-	/* 实现：删除某学生信息 */
-	public void delete(String xh){
+
+	@Override
+	public void delete(String glh) {
+		// TODO Auto-generated method stub
 		try{
 			System.out.println("在执行xsDao的delete");
 			Session session=getSession();
 			Transaction ts=session.beginTransaction();
-			Xsb xs=find(xh);
-			session.delete(xs);
+			Glb gl=find(glh);
+			session.delete(gl);
 			ts.commit();
 			session.close();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
-	
-	/* 实现：修改某学生信息 */
-	public void update(Xsb xs){
+
+	@Override
+	public void update(Glb gl) {
+		// TODO Auto-generated method stub
 		try{
 			Session session=getSession();
 			Transaction ts=session.beginTransaction();
-			session.update(xs);
+			session.update(gl);
 			ts.commit();
 			session.close();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
-	
-	/* 实现：学生信息录入 */
-	public void save(Xsb xs){
+
+	@Override
+	public void save(Glb gl) {
+		// TODO Auto-generated method stub
 		try{
 			Session session=getSession();
 			Transaction ts=session.beginTransaction();
-			session.save(xs);
+			session.save(gl);
 			ts.commit();
 			session.close();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
+
 }

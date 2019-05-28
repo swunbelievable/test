@@ -5,7 +5,7 @@
 <body>
 	<h3>请填写课程信息</h3>
 	<hr width="700" align="left">
-	<s:form action="addXs" method="post" enctype="multipart/form-data">
+	<s:form action="addKc" method="post" enctype="multipart/form-data">
 		<table border="0" cellspacing="0" cellpadding="1">
 			<tr>
 				<td>

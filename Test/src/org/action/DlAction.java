@@ -1,10 +1,14 @@
 package org.action;
+import java.io.PrintWriter;
 import java.util.*;
+import javax.servlet.http.HttpServletResponse;
 import org.model.*;
 import org.service.*;
 import com.opensymphony.xwork2.*;
 public class DlAction extends ActionSupport{
 	private Dlb dl;
+//	private String type="11111";
+	private Xsb xs;
 	protected DlService dlService;
 	//处理用户请求的 execute 方法
 	public String execute() throws Exception{
@@ -24,6 +28,7 @@ public class DlAction extends ActionSupport{
         else{
         	validated=true;						//该用户在之前已登录过并成功验证，故标识为 true 表示无须再验了
         }
+		System.out.println(dl.getType());
         if(validated){
         	//验证成功返回字符串 "success"
         	return SUCCESS;
@@ -47,4 +52,12 @@ public class DlAction extends ActionSupport{
 	public void setDlService(DlService dlService){
 		this.dlService = dlService;
 	}
+
+//	public String getType() {
+//		return type;
+//	}
+//
+//	public void setType(String type) {
+//		this.type = type;
+//	}
 }

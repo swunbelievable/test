@@ -96,9 +96,9 @@ public class KcAction extends ActionSupport{
 	}
 	public String addKc() throws Exception{							//执行录入操作
 		Kcb course=new Kcb();
-		String kc1=kc.getKch();
-		//学号已存在，不可重复录入
-		if(kcService.find(kc1)!=null){
+		String kch=kc.getKch();
+		//课程号已存在，不可重复录入
+		if(kcService.find(kch)!=null){
 			return ERROR;
 		}
 		course.setKch(kc.getKch());

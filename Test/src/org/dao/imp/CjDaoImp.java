@@ -60,22 +60,26 @@ public class CjDaoImp extends BaseDAO implements CjDao{
 	/* 实现：删除学生成绩 */
 	public void deleteCj(String xh, String kch){
 		try{
+			System.out.println("在执行cjDao的delete");
 			Session session=getSession();
 			Transaction ts=session.beginTransaction();
 			session.delete(getXsCj(xh, kch));
 			ts.commit();
 			session.close();
+			System.out.println("执行完cjDao的delete，但还在方法体中");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
 	public void deleteOneXsCj(String xh){
 		try{
+			System.out.println("在执行cjDao的deleteOneXscj");
 			Session session=getSession();
 			Transaction ts=session.beginTransaction();
 			session.delete(getXsCjList(xh));
 			ts.commit();
 			session.close();
+			System.out.println("执行完cjDao的deleteOneXscj，但还在方法体中");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

@@ -21,8 +21,11 @@ public class XsServiceManage implements XsService{
 	
 	/* 业务实现：删除某学生信息 */
 	public void delete(String xh){
+		System.out.println("准备执行xsDao的delete");
 		xsDao.delete(xh);
+		System.out.println("执行完xsDao的delete，准备执行cjDao的deleteOneXscj");
 		cjDao.deleteOneXsCj(xh);			//删除学生的同时要删除该生对应的成绩
+		System.out.println("执行完cjDao的deleteOneXscj");
 	}
 	
 	/* 业务实现：修改某学生信息 */

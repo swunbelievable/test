@@ -3,7 +3,7 @@
 <html>
 <head></head>
 <body>
-	<h3>该学生信息如下：</h3>
+	<h3>该课程信息如下：</h3>
 	<s:set name="kc" value="#request.kc"></s:set>
 	<s:form action="kcInfo" method="post">
 		<table border="0" cellpadding="5">

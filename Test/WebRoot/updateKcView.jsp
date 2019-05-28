@@ -3,7 +3,7 @@
 <html>
 <head></head>
 <body>
-	<s:set name="xs" value="#request.kcInfo"></s:set>
+	<s:set name="kc" value="#request.kcInfo"></s:set>
 	<s:form action="updateKc" method="post" enctype="multipart/form-data">
 		<table border="0" cellspacing="1" cellpadding="8" width="500">
 			<tr>
@@ -40,8 +40,5 @@
 		<input type="submit" value="修改"/>
 		<input type="button" value="返回" onclick="javascript:history.back();"/>
 	</s:form>
-	<script type="text/javascript">
-		document.getElementById("xs.zyb.id").value='<s:property value="#xs.zyb.id"/>'
-	</script>
 </body>
 </html>

@@ -23,8 +23,9 @@ public class XsAction extends ActionSupport{
 		List list=xsService.findAll(pageNow,pageSize);
 		Map request=(Map)ActionContext.getContext().get("request");
 		Pager page=new Pager(getPageNow(),xsService.findXsSize());
-		request.put("list", list);
+		
 		request.put("page", page);
+		request.put("list", list);
 		return SUCCESS;
 	}
 	

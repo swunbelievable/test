@@ -7,7 +7,7 @@
 		<tr align="center" bgcolor="silver">
 			<th>课程号</th><th>课程名</th><th>开学学期</th><th>学时</th><th>学分</th><th>操作</th><th>操作</th>
 		</tr>
-		<s:iterator value="#request.list" id="xs">
+		<s:iterator value="#request.list" id="kc">
 		<tr>
 			<td><s:property value="#kc.kch"/></td>
 			<td><s:property value="#kc.kcm"/></td>

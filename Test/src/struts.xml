@@ -5,9 +5,9 @@
 <struts>
 	<package name="default" extends="struts-default">
 		<!-- 用户登录 -->
-		<action name="login" class="dl">
-			<result name="success">/welcome.jsp</result>
-			<result name="error">/error.jsp</result>
+		<action name="login" class="dl" method="execute">
+			<result name="success">/main.jsp</result>
+			<result name="error">/login.jsp</result>
 		</action>
 		<!-- 显示所有学生信息 -->
 		<action name="xsInfo" class="xs">
@@ -38,7 +38,7 @@
 			<result name="error">/existXs.jsp</result>
 		</action>
 		<!-- 显示所有课程信息 -->
-		<action name="KcInfo" class="kc">
+		<action name="kcInfo" class="kc">
 			<result name="success">/kcInfo.jsp</result>
 		</action>
 		<!-- 查看某课程详细信息 -->
@@ -46,14 +46,14 @@
 			<result name="success">/morekc.jsp</result>
 		</action>
 		<!-- 删除某课程信息 -->
-		<action name="deleteKs" class="kc" method="deleteKc">
+		<action name="deleteKc" class="kc" method="deleteKc">
 			<result name="success">/success.jsp</result>
 		</action>
 		<!-- 修改某课程信息 -->
 		<action name="updateKcView" class="kc" method="updateKcView">
 			<result name="success">/updateKcView.jsp</result>
 		</action>
-		<action name="updatekc" class="kc" method="updatekc">
+		<action name="updateKc" class="kc" method="updateKc">
 			<result name="success">/success.jsp</result>
 		</action>
 		<!-- 录入课程信息 -->
@@ -68,8 +68,8 @@
 		<action name="addXscjView" class="cj">
 			<result name="success">/addCj.jsp</result>
 		</action>
-		<action name="addorupdateXscj" class="cj" method="addOrUpdateXscj">
-			<result name="success">/success.jsp</result>
+		<action name="addorupdateXscj" class="cj" method="addorupdateXscj">
+			<result name="success">/xscjInfo.jsp</result>
 		</action>
 		<!-- 显示所有学生成绩 -->
 		<action name="xscjInfo" class="cj" method="xscjInfo">

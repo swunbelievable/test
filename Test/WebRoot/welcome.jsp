@@ -4,6 +4,6 @@
 <head></head>
 <body>
 	<s:set name="dl" value="#session['dl']"/>
-	学号<s:property value="#dl.xh"/>登录成功！欢迎使用学生成绩管理系统。
+	<s:property value="#dl.xh"/>登录成功！欢迎使用学生成绩管理系统。
 </body>
 </html>

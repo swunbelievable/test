@@ -3,13 +3,13 @@
 <head>
 	<title>学生成绩管理系统</title>
 </head>
-<frameset rows="25.5%,65.5%,*" border="0">
+<frameset rows="22.5%,59.5%,*" border="0" scrolling="yes">
 	<frame src="head.jsp">
-	<frameset cols="15%,*">
-		<frame src="left.jsp">
-		<frame src="login.jsp" name="right">
+	<frameset cols="30%,*">
+		<frame src="leftTest.jsp" scrolling="no">
+		<frame src="welcome.jsp" name="right">
 	</frameset>
-	<frame src="foot.jsp">
+	<frame src="foot.jsp" scrolling="no">
 </frameset>
 <body></body>
 </html>
