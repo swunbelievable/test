@@ -20,7 +20,7 @@
 			</s:if>
 		</tr>
 		<tr align="center" bgcolor="silver">
-			<th>学号</th><th>姓名</th><th>性别</th><th>专业</th><th>出生时间</th><th>总学分</th><th>详细信息</th><th>操作</th><th>操作</th>
+			<th>学号</th><th>姓名</th><th>性别</th><th>专业</th><th>出生时间</th><th>总学分</th><th>操作</th><th>操作</th>
 		</tr>
 		<s:iterator value="#request.list" id="xs">
 		<tr>
@@ -33,9 +33,6 @@
 			<td><s:property value="#xs.zyb.zym"/></td>
 			<td><s:property value="#xs.cssj"/></td>
 			<td><s:property value="#xs.zxf"/></td>
-			<td>
-				<a href="findXs.action?xs.xh=<s:property value="#xs.xh"/>">详细信息</a>
-			</td>
 			<td>
 				<a href="deleteXs.action?xs.xh=<s:property value="#xs.xh"/>" onClick="if(!confirm('确定删除该生信息吗？'))return false;else return true;">删除</a>
 			</td>

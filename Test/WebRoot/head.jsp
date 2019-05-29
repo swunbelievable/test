@@ -161,7 +161,7 @@
  
 <body>
 <div class="footer" id="foot">
-    <p align="center" style="padding-top:36px"><font size="10px">学生成绩管理系统</font></p>
+    <p align="center" style="padding-top:36px"><font size="10px">教务系统</font></p>
  	
 </div>
 </body>

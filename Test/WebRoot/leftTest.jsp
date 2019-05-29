@@ -21,7 +21,7 @@
             height: 10x;
             margin-bottom: 80px;
             margin-right: 20px;
-            line-height: 40px;  /*行距*/
+            line-height: 25px;  /*行距*/
             text-align: center;
             border-bottom: 1px solid #999;
             position: relative;
@@ -72,6 +72,12 @@
         <ul>
             <li><a href="addXsView.action" target="right">学生信息录入</a></li>
             <li><a href="xsInfo.action" target="right">学生信息查询</a></li>
+        </ul>
+    </li>
+     <li><font size="4px">教师信息管理</font>
+        <ul>
+            <li><a href="addJsView.action" target="right">教师信息录入</a></li>
+            <li><a href="jsInfo.action" target="right">教师信息查询</a></li>
         </ul>
     </li>
     <li><font size="4px">课程信息管理</font>

@@ -11,6 +11,8 @@ public interface JsService {
 	/* 服务：查看某个教师的详细信息 */
 	public Jsb find(String jsh);							//根据教师号查询某教师信息
 	
+	public Jsb find(String jsh,String type);
+	
 	/* 服务：删除某教师信息 */
 	public void delete(String jsh);						//根据教师号删除学生
 	

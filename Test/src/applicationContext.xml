@@ -34,9 +34,11 @@
 			<list>
 				<value>org/model/Dlb.hbm.xml</value>
 				<value>org/model/Xsb.hbm.xml</value>
+				<value>org/model/Jsb.hbm.xml</value>
 				<value>org/model/Zyb.hbm.xml</value>
 				<value>org/model/Cjb.hbm.xml</value>
-				<value>org/model/Kcb.hbm.xml</value></list>
+				<value>org/model/Kcb.hbm.xml</value>
+				<value>org/model/Glb.hbm.xml</value></list>
 		</property></bean>
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
@@ -52,6 +54,9 @@
 	</bean>
 	<bean id="dl" class="org.action.DlAction">
 		<property name="dlService" ref="dlService"/>
+		<property name="xsService" ref="xsService"/>
+		<property name="glService" ref="glService"/>
+		<property name="jsService" ref="jsService"/>
 	</bean>
 	
 	<bean id="xsDao" class="org.dao.imp.XsDaoImp" parent="baseDAO"/>
@@ -92,5 +97,9 @@
 	</bean>
 	<bean id="glService" class="org.service.imp.GlServiceManage">
 		<property name="glDao" ref="glDao"/>
+	</bean>
+	<bean id="js" class="org.action.JsAction">
+		<property name="jsService" ref="jsService"/>
+		<property name="zyService" ref="zyService"/>
 	</bean>
 </beans>

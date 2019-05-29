@@ -64,6 +64,25 @@ public class JsDaoImp extends BaseDAO implements JsDao {
 			return null;
 		}	
 	}
+	
+	public Jsb find(String jsh,String type) {
+		// TODO Auto-generated method stub
+		try{
+			Session session=getSession();
+			Transaction ts=session.beginTransaction();
+			Query query=session.createQuery("from Jsb where jsh=? and type=?");
+			query.setParameter(0, jsh);
+			query.setParameter(1, type);
+			query.setMaxResults(1);
+			Jsb js=(Jsb)query.uniqueResult();
+			ts.commit();
+			session.clear();
+			return js;
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}	
+	}
 
 	@Override
 	public void delete(String jsh) {

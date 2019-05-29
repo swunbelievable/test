@@ -3,7 +3,7 @@
 <head>
 	<title>学生成绩管理系统</title>
 </head>
-<frameset rows="22.5%,59.5%,*" border="0" scrolling="yes">
+<frameset rows="20.5%,62%,*" border="0" scrolling="yes">
 	<frame src="head.jsp">
 	<frameset cols="30%,*">
 		<frame src="leftTest.jsp" scrolling="no">

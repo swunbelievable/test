@@ -50,13 +50,18 @@ public class GlDaoImp extends BaseDAO implements GlDao {
 	public Glb find(String glh) {
 		// TODO Auto-generated method stub
 		try{
+			System.out.println("1111");
 			Session session=getSession();
 			Transaction ts=session.beginTransaction();
+			System.out.println("222");
 			Query query=session.createQuery("from Glb where glh=?");
+			System.out.println("3333");
 			query.setParameter(0, glh);
 			query.setMaxResults(1);
 			Glb gl=(Glb)query.uniqueResult();
+			System.out.println("準備提交GL_dl事物");
 			ts.commit();
+			System.out.println("已提交GL_dl事物");
 			session.clear();
 			return gl;
 		}catch(Exception e){

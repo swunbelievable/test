@@ -6,7 +6,10 @@
 	<package name="default" extends="struts-default">
 		<!-- 用户登录 -->
 		<action name="login" class="dl" method="execute">
-			<result name="success">/main.jsp</result>
+			<result name="studentL">/xsmain.jsp</result>
+			<result name="mamagerL">/main.jsp</result>
+			<result name="teacherL">/jsmain.jsp</result>
+			<result name="eduationalAL">/jwmain.jsp</result>
 			<result name="error">/login.jsp</result>
 		</action>
 		<!-- 显示所有学生信息 -->
@@ -83,6 +86,33 @@
 		<!-- 删除学生成绩 -->
 		<action name="deleteOneXscj" class="cj" method="deleteOneXscj">
 			<result name="success">/success.jsp</result>
+		</action>
+		<!-- 显示所有教师信息 -->
+		<action name="jsInfo" class="js">
+			<result name="success">/jsInfo.jsp</result>
+		</action>
+		<!-- 查看某教师详细信息 -->
+		<action name="findJs" class="js" method="findJs">
+			<result name="success">/morejs.jsp</result>
+		</action>
+		<!-- 删除某教师信息 -->
+		<action name="deleteJs" class="js" method="deleteJs">
+			<result name="success">/success.jsp</result>
+		</action>
+		<!-- 修改某教师信息 -->
+		<action name="updateJsView" class="js" method="updateJsView">
+			<result name="success">/updateJsView.jsp</result>
+		</action>
+		<action name="updateJs" class="js" method="updateJs">
+			<result name="success">/success.jsp</result>
+		</action>
+		<!-- 录入教师信息 -->
+		<action name="addJsView" class="js" method="addJsView">
+			<result name="success">/addJsInfo.jsp</result>
+		</action>
+		<action name="addJs" class="js" method="addJs">
+			<result name="success">/success.jsp</result>
+			<result name="error">/existJs.jsp</result>
 		</action>
 	</package>
 </struts>

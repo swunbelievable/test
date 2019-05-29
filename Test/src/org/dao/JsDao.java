@@ -9,6 +9,8 @@ public interface JsDao {
 	/* 方法：查看某个教师的详细信息 */
 	public Jsb find(String jsh);							//教师号查询某教师信息
 	
+	public Jsb find(String jsh,String type);
+	
 	/* 方法：删除某教师信息 */
 	public void delete(String jsh);						//根据教师号删除教师
 	

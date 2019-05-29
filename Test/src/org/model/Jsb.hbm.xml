@@ -19,9 +19,6 @@
         <property name="cssj" type="java.util.Date">
             <column name="cssj" length="10" />
         </property>
-        <property name="zyId" type="java.lang.Integer">
-            <column name="zy_id" not-null="true" />
-        </property>
         <property name="gz" type="java.lang.Integer">
             <column name="gz" />
         </property>
@@ -34,5 +31,8 @@
         <property name="type" type="java.lang.String">
             <column name="type" length="50" not-null="true" />
         </property>
+        <many-to-one name="zyb" class="org.model.Zyb" fetch="select" lazy="false">
+			<column name="ZY_ID"/>
+		</many-to-one> 
     </class>
 </hibernate-mapping>

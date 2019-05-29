@@ -10,6 +10,11 @@
 	margin: 0;
 	padding: 0;
 }
+#fra {
+	margin-top: -15px;
+	margin-left: 28px;
+	margin-bottom: 4px;
+}
 #wrap {
 	height: 719px;
 	width: 100;
@@ -162,7 +167,7 @@
 <body>
 <form action="login" method="post">
 <div class="header" id="head">
-  <div class="title">学生成绩管理系统</div>
+  <div class="title">教务系统</div>
 	
 </div>
 	
@@ -183,12 +188,11 @@
 				<input name="dl.kl" type="password"
 					placeholder="输入用户密码" />
 			</div>
-			<div>
+			<div id="fra">用户类型：
 				<select name="dl.type">
 					<option value="学生">学生</option>
 					<option value="教师">教师</option>
 					<option value="管理员">管理员</option>
-					<option value="辅导员">辅导员</option>
 					<option value="教务">教务</option>
 				</select>
 			</div>

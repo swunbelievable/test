@@ -118,5 +118,6 @@ public class Xsb implements java.io.Serializable {
 	public void setZyb(Zyb zyb){
 		this.zyb = zyb;
 	}
+	
 	//
 }

@@ -14,11 +14,12 @@ public class Jsb implements java.io.Serializable {
 	private String jsm;
 	private Short xb;
 	private Date cssj;
-	private Integer zyId;
+	//private Integer zyId;
 	private Integer gz;
 	private String bz;
-	private String zp;
+	private byte[] zp;;
 	private String type;
+	private Zyb zyb;
 
 	// Constructors
 
@@ -27,26 +28,27 @@ public class Jsb implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Jsb(String jsh, String jsm, Short xb, Integer zyId, String type) {
+	public Jsb(String jsh, String jsm, Short xb, String type) {
 		this.jsh = jsh;
 		this.jsm = jsm;
 		this.xb = xb;
-		this.zyId = zyId;
+		//this.zyId = zyId;
 		this.type = type;
 	}
 
 	/** full constructor */
-	public Jsb(String jsh, String jsm, Short xb, Date cssj, Integer zyId, Integer gz, String bz, String zp,
-			String type) {
+	public Jsb(String jsh, String jsm, Short xb, Date cssj, Integer gz, String bz, byte[] zp,
+			String type, Zyb zyb) {
 		this.jsh = jsh;
 		this.jsm = jsm;
 		this.xb = xb;
 		this.cssj = cssj;
-		this.zyId = zyId;
+		//this.zyId = zyId;
 		this.gz = gz;
 		this.bz = bz;
 		this.zp = zp;
 		this.type = type;
+		this.zyb=zyb;
 	}
 
 	// Property accessors
@@ -83,13 +85,13 @@ public class Jsb implements java.io.Serializable {
 		this.cssj = cssj;
 	}
 
-	public Integer getZyId() {
-		return this.zyId;
-	}
-
-	public void setZyId(Integer zyId) {
-		this.zyId = zyId;
-	}
+//	public Integer getZyId() {
+//		return this.zyId;
+//	}
+//
+//	public void setZyId(Integer zyId) {
+//		this.zyId = zyId;
+//	}
 
 	public Integer getGz() {
 		return this.gz;
@@ -107,11 +109,11 @@ public class Jsb implements java.io.Serializable {
 		this.bz = bz;
 	}
 
-	public String getZp() {
-		return this.zp;
+	public byte[] getZp() {
+		return zp;
 	}
 
-	public void setZp(String zp) {
+	public void setZp(byte[] zp) {
 		this.zp = zp;
 	}
 
@@ -123,4 +125,12 @@ public class Jsb implements java.io.Serializable {
 		this.type = type;
 	}
 
+	public Zyb getZyb() {
+		return this.zyb;
+	}
+
+	public void setZyb(Zyb zyb) {
+		this.zyb = zyb;
+	}
+	
 }

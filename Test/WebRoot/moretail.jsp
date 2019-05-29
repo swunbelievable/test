@@ -4,7 +4,7 @@
 <head></head>
 <body>
 	<h3>该学生信息如下：</h3>
-	<s:set name="xs" value="#request.xs"></s:set>
+	<s:set name="xs" value="#session.xs"></s:set>
 	<s:form action="xsInfo" method="post">
 		<table border="0" cellpadding="5">
 			<tr>
@@ -51,11 +51,6 @@
 				<td>备注</td>
 				<td width="100">
 					<s:property value="#xs.bz"/>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					<s:submit value="返回"/>
 				</td>
 			</tr>
 		</table>

@@ -54,7 +54,9 @@ public class CjAction extends ActionSupport{
 	
 	/* Action 模块：查看某个学生的成绩表 */
 	public String findXscj() throws Exception{
-		List list=cjService.getXsCjList(cj.getId().getXh());
+		Map session=ActionContext.getContext().getSession();
+		Dlb dlb=(Dlb)session.get("dl");
+		List list=cjService.getXsCjList(dlb.getXh());
 		if(list.size()>0){
 			Map request=(Map)ActionContext.getContext().get("request");
 			request.put("list", list);

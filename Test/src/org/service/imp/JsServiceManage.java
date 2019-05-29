@@ -25,6 +25,10 @@ public class JsServiceManage implements JsService {
 		// TODO Auto-generated method stub
 		return jsDao.find(jsh);
 	}
+	
+	public Jsb find(String jsh,String type){
+		return jsDao.find(jsh, type);
+	}
 
 	@Override
 	public void delete(String jsh) {
@@ -41,7 +45,7 @@ public class JsServiceManage implements JsService {
 	@Override
 	public void save(Jsb js) {
 		// TODO Auto-generated method stub
-
+		jsDao.save(js);
 	}
 	
 	public JsDao getJsDao() {
